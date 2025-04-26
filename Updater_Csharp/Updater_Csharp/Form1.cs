@@ -49,7 +49,7 @@ namespace Updater_Csharp
                     {
                         if (MessageBox.Show("Доступна новая версия", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
-                            wc.DownloadFile("Адресс загрузки Екзе", "New.exe");
+                            wc.DownloadFile("https://raw.githubusercontent.com/Kharkov21ua/UpdaterSoft/main/Updater_Csharp/Updater_Csharp/bin/Release/Updater_Csharp.exe\r\n", "New.exe");
                             Cmd($"taskkill /f /im \"{exename}\" && timeout /t 2 && del \"{exepach}\" && ren new.exe \"{exename}\" && \"{exepach}\"");
                         }
                         else
